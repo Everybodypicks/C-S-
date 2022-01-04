@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.StockMapper">
+    <resultMap id="userResultMap" type="com.example.demo.bean.StockBean">
+        <result property="date" column="日期" />
+        <result property="opening_price" column="开盘价(元)" />
+        <result property="max_price" column="最高价(元)" />
+        <result property="min_price" column="最低价(元)" />
+        <result property="close_price" column="收盘价(元)" />
+    </resultMap>
+    <select id="select" resultType="com.example.demo.bean.StockBean">
+        SELECT `日期` as date,`开盘价(元)` as opening_price,`最高价(元)` as max_price,`最低价(元)` as min_price,`收盘价(元)` as close_price ,市盈率 as PE FROM `stock data`.实验数据：上证某公司股市数据
+    </select>
+
+</mapper>
